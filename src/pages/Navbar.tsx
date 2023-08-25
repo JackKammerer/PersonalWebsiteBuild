@@ -5,12 +5,14 @@ interface NavButtonInput {
 }
 
 function NavButton( {text}: NavButtonInput ) {
+    const redirect = (info: string) => { window.location.href = info.toLowerCase(); }
+
     return (
-    <div className="nav-button">
-        <div className="nav-button-text">
-            {text}
+        <div className="nav-button" onClick={() => redirect(text)}>
+            <div className="nav-button-text"> 
+                {text}
+            </div>
         </div>
-    </div>
     );
 }
 
