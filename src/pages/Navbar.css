@@ -1,0 +1,33 @@
+nav {
+    background-color: #5582e1;
+    height: 50px;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+}
+
+.nav-button {
+    background-color: #4770ee;
+    border-radius: 20px;
+    height: 30px;
+    width: 20vw;
+    margin: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-button-text {
+    color: white;
+}
+
+.nav-button:hover {
+    background-color: #a5bdef;
+    border-color: #0a1938;
+    cursor: pointer;
+}
+
+.nav-button:hover > .nav-button-text {
+    color: black;
+    cursor: pointer;
+}
