@@ -2,7 +2,8 @@ import { Route, Routes } from 'react-router-dom'
 
 import Home from "./pages/Home"
 import Homelab from "./pages/Homelab"
-import About from "./pages/About"
+import WriteUps from "./pages/Writeups"
+import NotFound from "./pages/NotFound"
 
 export function Router() {
   return (
@@ -10,7 +11,8 @@ export function Router() {
       <Routes>
         <Route index element={<Home />} />
         <Route path="/homelab" element={<Homelab />} />
-        <Route path="*" element={<About />} />
+        <Route path="/writeups" element={<WriteUps />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </>
   )

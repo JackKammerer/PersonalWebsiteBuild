@@ -1,0 +1,59 @@
+#app {
+    padding: 0px;
+    margin: 0px;
+    width: 100vw;
+}
+
+body {
+    margin: 0px;
+}
+
+h2 {
+    margin: 0px;
+}
+
+div {
+    background-color: white;
+    padding: 15px;
+    margin: 20px;
+    width: 45vw;
+    transition: transform 0.5s ease;
+    border-radius: 20px;
+}
+
+li {
+    font-size: 25px;
+    margin: 10px;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+a:hover {
+    color: white;
+    background-color: #E0B952;
+}
+
+h2 {
+    font-size: 30px;
+    margin-bottom: 40px;
+}
+
+.hidden {
+    opacity: 0;
+    transform: translateX(-100%);
+}
+
+.show {
+    opacity: 1;
+    transform: translateX(0);
+    transition: transform 1s 0.2s;
+}
+
+@media(prefers-reduced-motion) {
+    .hidden {
+        transition: none;
+    }
+}
