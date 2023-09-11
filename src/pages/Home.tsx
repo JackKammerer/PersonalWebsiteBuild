@@ -1,7 +1,8 @@
-import './Home.css';
 import './index.css';
 import Navbar from './Navbar.tsx';
 import FaceImage from "./images/KammererFaceImage.jpeg";
+import languageImage from "./images/Languages.png";
+import toolsImage from "./images/toolsDrawing.png";
 import { useState, useRef, useEffect } from 'react';
 
 interface LinkInput {
@@ -53,11 +54,9 @@ function IntroText(): JSX.Element {
            
     return (
         <div ref={targetRef} className={isVisible ? "show first-text" : "hidden first-text"}>
-            <h2 className="title-text"> About Me: </h2>
+            <h1 className="title-text"> About Me: </h1>
             <div className="intro-text">
-                <p> 
-                    Hi! I am Jack Kammerer, a 2nd year computer science student at Oregon State University. I have been on the Dean's List for my entire first term, and have maintained a 4.0 GPA. I am experienced in multiple programming languages and computer science tools. I have experience with web development, compiled languages, computer hardware, networking technologies, and cybersecurity. I have also built my own homelab, worked on applications in team environments, and experimented with many different languages and tools in order to make myself the best computer scientist possible.
-                </p>
+                <p className="intro-text-paragraph"> Hi! I am Jack Kammerer, a 2nd year computer science student at Oregon State University. I have been on the Dean's List for my entire first term, and have maintained a 4.0 GPA. I am experienced in multiple programming languages and computer science tools. I have experience with web development, compiled languages, computer hardware, networking technologies, and cybersecurity. I have also built my own homelab, worked on applications in team environments, and experimented with many different languages and tools in order to make myself the best computer scientist possible.</p>
             </div>
         </div>
     );
@@ -96,6 +95,7 @@ function LanguagesList(): JSX.Element {
                 <LinkListItems input="Microsoft Macro Assembly (MASM)" url="https://learn.microsoft.com/en-us/cpp/assembler/masm/microsoft-macro-assembler-reference?view=msvc-170"/>     
                 <LinkListItems input="x86 Assembly" url="https://en.wikipedia.org/wiki/X86_assembly_language"/>     
             </ul>
+            <img className="div-images" src={languageImage} />
         </div>
     );
 }
@@ -123,6 +123,7 @@ function ToolsList(): JSX.Element {
                 <LinkListItems input="Pi-KVM" url="https://github.com/pikvm/pikvm" />     
                 <LinkListItems input="SSH and SSH Keys" url="https://www.ssh.com/academy/ssh-keys"/>     
             </ul>
+            <img className="div-images" src={toolsImage} />
         </div>
     );
 }
@@ -173,7 +174,7 @@ function Hobbies() {
 
 function Content() {
     return (
-        <div className="content-block-style">
+        <div className="content-block home-back-image">
             <IntroText />
             <FaceBlock />
             <LanguagesList />

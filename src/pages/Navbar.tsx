@@ -1,4 +1,4 @@
-import './Navbar.css'
+import './index.css'
 
 interface NavButtonInput {
     text: string,
@@ -30,6 +30,7 @@ function LogoLinks ( {image, link}: LogoLinkInput ){
 }
 
 export default function Navbar() {
+    const emailString = "mailto:" + import.meta.env.VITE_BIZ_EMAIL; 
     return (
         <nav>
             <NavButton text="About" />
@@ -39,7 +40,7 @@ export default function Navbar() {
             <div className="socials-links">
                 <LogoLinks image="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" link="https://github.com/JackKammerer/" />
                 <LogoLinks image="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/800px-LinkedIn_logo_initials.png" link="https://www.linkedin.com/in/jack-kammerer" />
-                <LogoLinks image="https://play-lh.googleusercontent.com/KSuaRLiI_FlDP8cM4MzJ23ml3og5Hxb9AapaGTMZ2GgR103mvJ3AAnoOFz1yheeQBBI" link="mailto:jackkammerer16@gmail.com" />
+                <LogoLinks image="https://play-lh.googleusercontent.com/KSuaRLiI_FlDP8cM4MzJ23ml3og5Hxb9AapaGTMZ2GgR103mvJ3AAnoOFz1yheeQBBI" link={emailString} />
                 <LogoLinks image="https://www.edigitalagency.com.au/wp-content/uploads/twitter-logo-black-png.png" link="https://twitter.com/jackkammerer2" />
             </div>
         </nav>

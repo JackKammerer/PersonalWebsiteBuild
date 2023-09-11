@@ -6,10 +6,18 @@
 
 body {
     margin: 0px;
+    font-family: 'Kanit', sans-serif;
+}
+
+h1 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 70px;
 }
 
 h2 {
     margin: 0px;
+    font-size: 30px;
 }
 
 div {
@@ -36,11 +44,6 @@ a:hover {
     background-color: #E0B952;
 }
 
-h2 {
-    font-size: 30px;
-    margin-bottom: 40px;
-}
-
 .hidden {
     opacity: 0;
     transform: translateX(-100%);
@@ -56,4 +59,453 @@ h2 {
     .hidden {
         transition: none;
     }
+}
+
+.content-block {
+    padding: 60px 20px 0px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0px;
+    width: 100vw;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding-left: 0px;
+}
+
+
+.div-images {
+    margin-top: 40px;
+    height: 380px;
+    width: 400px;
+}
+
+
+
+.title-block {
+    width: 70vw;
+    margin: 40px; 
+    padding: 30px;
+    font-size: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+nav {
+    background-color: #5582e1;
+    height: 50px;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    margin: 0px;
+    border-radius: 0px;
+    z-index: 9999;
+}
+
+.nav-button {
+    background-color: #4770ee;
+    border-radius: 20px;
+    height: 30px;
+    width: 20vw;
+    margin: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0px;
+}
+
+.nav-button-text {
+    color: white;
+}
+
+.nav-button:hover {
+    background-color: #a5bdef;
+    border-color: #0a1938;
+    cursor: pointer;
+}
+
+.nav-button:hover > .nav-button-text {
+    color: black;
+    cursor: pointer;
+}
+
+.socials-links {
+    background-color: transparent;
+    width: auto;
+    height: 50px;
+    display: flex;
+    margin: 0px 0px 0px auto;
+    justify-content: flex-end;
+    align-content: center;
+    padding: 0px;
+}
+
+.logo-div {
+    width: auto;
+    height: 25px;
+    margin: 14px 20px;
+    padding: 0px;
+    border-radius: 4px;
+    background-color: white;
+}
+
+.logo-div:hover {
+    margin: 6px 12px;
+    height: 35px;
+}
+
+.logo-div:hover > a > img {
+    border: 8px solid #a5bdef;
+    filter: grayscale(0%);
+    cursor: pointer;
+}
+
+.logo-div a:hover {
+    background-color: transparent;
+    color: transparent;
+}
+
+.logo-div img {
+    width: 25px;
+    filter: grayscale(100%);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.hidden.hobbies {
+    transform: translateX(-200%);
+}
+
+.hidden.tools-text {
+    transform: translateX(-200%);
+}
+
+.hidden.face-image-div {
+    transform: translateX(-200%);
+}
+
+@media (max-width: 1400px) {
+    .hidden {
+        transform: translateX(-150%);
+    }
+
+    .hidden.hobbies {
+        transform: translateX(-150%);
+    }
+
+    .hidden.tools-text {
+        transform: translateX(-150%);
+    }
+
+    .hidden.face-image-div {
+        transform: translateX(-150%);
+    }
+}
+
+.home-back-image {
+    background-image: url("./images/beachImage.jpg");
+}
+
+
+
+
+
+
+
+.intro-text-paragraph {
+    font-size: 35px;
+    margin-top: 0px;
+}
+
+.intro-text {
+    width: auto;
+}
+
+
+
+
+
+
+
+
+.face-image {
+    width: 45vw;
+}
+
+.face-image-div {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding: 15px;
+    width: auto;
+}
+
+
+
+
+
+
+.cs-languages-text {
+    margin-top: 400px;
+    margin-bottom: 400px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+
+
+
+
+
+
+
+
+
+.tools-text {
+    margin-top: 400px;
+    margin-bottom: 400px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tools-text ul {
+    width: 400px;
+}
+
+
+
+
+
+
+
+
+.accomplishments {
+    margin-bottom: 400px;
+}
+
+
+
+
+
+
+
+.hobbies {
+    margin-bottom: 400px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.footer {
+    width: 100vw;
+    margin: 0px;
+    background-color: #5582e1;
+    color: white;
+    display: flex;
+    justify-content: center;
+    border-radius: 0px;
+}
+
+
+
+
+
+
+
+
+
+.homelab-back-image {
+    background-image: url("./images/homelabBackground.jpg");
+}
+
+
+
+
+
+
+
+
+
+
+
+.specs {
+    margin-top: 80px;
+}
+
+
+
+
+
+
+.services {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 100px;
+}
+
+.services h2 {
+    width: 1000px;
+}
+
+
+
+
+
+
+.photo-divs{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    margin-top: 100px;
+}
+
+.photo-divs h2 {
+    margin: 20px;
+}
+
+.homelab-images {
+    width: +0vw;
+}
+
+
+
+.future-plans {
+    margin-top: 100px;
+}
+
+
+
+
+
+
+.bold {
+    font-weight: bold;
+    margin: auto 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.mountain-background {
+    background-image: url("./images/mountainBackground.jpg");
+}
+
+
+.project-announce {
+    width: 100vw;
+    margin: 200px 0px;
+    background-color: #5582e1;
+    color: white;
+    display: flex;
+    justify-content: center;
+    border-radius: 0px;
+    font-size: 60px;
+}
+
+
+.projects {
+    width: 55vw;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    margin-top: 70px;
+}
+
+.projects h3 {
+    margin: 20px 50vw;
+    font-size: 40px;
+    text-decoration: underline;
+}
+
+
+.projects p {
+    font-size: 25px;
+}
+
+
+
+
+
+
+
+
+.paper-background {
+    background-image: url("./images/jobsBackground.png");
+}
+
+
+.job-divs {
+    margin: 200px;
+}
+
+
+.job-divs h3 {
+    font-size: 40px;
+    margin-bottom: 0px;
+}
+
+
+.job-divs p {
+    font-size: 20px;
+    font-style: italic;
 }

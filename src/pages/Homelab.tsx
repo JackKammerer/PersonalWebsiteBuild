@@ -1,10 +1,10 @@
 import Navbar from "./Navbar.tsx";
-import './Homelab.css';
 import './index.css';
 import piKVMImage from './images/PiKVMImage.jpg';
 import atxImage from './images/ATXBoard.jpg';
 import piHole from './images/PiHole.jpg';
 import homeServer from './images/HomeServerTrimmed.jpg';
+import servicesImage from './images/servicesImage.png';
 
 interface LinkInput {
     input: string,
@@ -80,6 +80,7 @@ function Services() {
                     </ul>
                 </li>
             </ul> 
+            <img className="div-images" src={servicesImage} />
         </div>
     );
 }
@@ -106,30 +107,31 @@ interface ImageDivInput {
 
 function ReactImages( {title, image, classHeader, text }: ImageDivInput) {
     return (
-      <div className={classHeader + "-div"}>
+      <div className={classHeader + "-div photo-divs"}>
           <h2> {title} </h2>
-          <img src={image} className={classHeader + "-image"}/>
-          <p> {text} </p>
+          <img src={image} className={classHeader + "-image homelab-images"}/>
+          <p className="bold"> {title}: </p>
+          <p>{text} </p>
       </div>
     );
 }
 
 export default function Homelab() {
     let title1 = "PiKVM Setup";
-    let text1 = "PiKVM Setup. There is a CSI-to-HDMI Bridge from the Pi, so that HDMI output from the server can be fed to the Pi, and viewed over IP.";
+    let text1 = "PiKVM assembled with RPi4, CSI-HDMI bridge and using USB inputs/outputs." 
     let title2 = "ATX Board";
-    let text2 = "ATX Board. This board is connected to two GPIO pins on the Raspberry Pi running PiKVM, in order to allow the Pi to turn on the server through connecting the power and ground pins of the motherboard.";
+    let text2 = "Breadboard attached to PiKVM and ATX motherboard pins. Allows PiKVM to turn on server.";
     let title3 = "Home Server Setup";
-    let text3 = "Home Server. This is an overview of the homeserver, which is connected to the PiKVM.";
+    let text3 = "This is an overview of the homeserver, which is connected to the PiKVM.";
     let title4 = "PiHole Setup";
-    let text4 = "PiHole Setup. This is the PiHole, responsible for local DNS and AdBlock. This works over Wifi.";
+    let text4 = "This is the PiHole, responsible for local DNS and AdBlock. This works over Wifi.";
 
     return (
         <>
             <Navbar />
-            <div className="content-block">
+            <div className="content-block homelab-back-image">
                 <div className="title-block">
-                    <h2> My Homelab </h2>
+                    <h1> My Homelab </h1>
                     <p> This is a brief discussion of my homelab setup, including how it works, the services it runs, and my plans for the future. </p> 
                 </div>
                 <Specs />
