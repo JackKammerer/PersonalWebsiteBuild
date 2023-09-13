@@ -128,7 +128,7 @@ function ToolsList(): JSX.Element {
     );
 }
 
-function Accomplishments() {   
+function Accomplishments(): JSX.Element {   
     const [isVisible, setIsVisible] = useState(true);
     const targetRef: any = useRef(null);
     
@@ -150,7 +150,7 @@ function Accomplishments() {
     );
 }
 
-function Hobbies() {   
+function Hobbies(): JSX.Element {   
     const [isVisible, setIsVisible] = useState(true);
     const targetRef: any = useRef(null);
     
@@ -172,7 +172,16 @@ function Hobbies() {
     );
 }
 
-function Content() {
+function Footer(): JSX.Element {
+    return (
+        <div className="footer">
+            <h2> These are some basics about me! If you want to learn more, navigate to any of the above sections. Thank you for reading! </h2>
+        </div> 
+    );
+ 
+}
+
+function Content(): JSX.Element {
     return (
         <div className="content-block home-back-image">
             <IntroText />
@@ -181,14 +190,12 @@ function Content() {
             <ToolsList />
             <Accomplishments />
             <Hobbies />
-            <div className="footer">
-                <h2> These are some basics about me! If you want to learn more, navigate to any of the above sections. Thank you for reading! </h2>
-            </div>  
+            <Footer />
         </div>
     );
 }
 
-export default function Home() {
+export default function Home(): JSX.Element {
     return (
         <>
             <Navbar /> 

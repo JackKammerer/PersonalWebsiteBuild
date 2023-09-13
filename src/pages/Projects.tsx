@@ -4,11 +4,11 @@ import { useState, useEffect } from 'react';
 
 interface DivInput {
     title: string,
-    info: string,
+    info: string | null,
     link: string,
 }
 
-function WriteupDivs({ title, info, link }: DivInput) {
+function WriteupDivs({ title, info, link }: DivInput): JSX.Element {
     return (
         <div className="projects">
             <h3> <a href={ link }> { title } </a> </h3>
@@ -17,8 +17,8 @@ function WriteupDivs({ title, info, link }: DivInput) {
     ); 
 }
 
-export default function Projects() {
-    const [repos, setRepos] = useState(null);
+export default function Projects(): JSX.Element {
+    const [repos, setRepos] = useState<JSX.Element>( <div> Loading... </div>);
 
     useEffect(() => {
         async function githubFetch() {
@@ -34,7 +34,7 @@ export default function Projects() {
                 return <WriteupDivs key= {count} title={ repo.name } info={ repo.description } link={ repo.html_url } />
             });
 
-            setRepos(list);
+            setRepos( <> {list} </>);
         }
 
         githubFetch();
@@ -48,7 +48,7 @@ export default function Projects() {
                     <h1> Projects </h1>
                     <p> This is a link to projects that I have created, and saved to Github repositories. This is a brief demonstration of some of the work I have done. Click on the titles of any of the projects to open their repositories in Github. </p>
                 </div>
-                {repos ? (repos) : (<div> Loading... </div>)}
+                {repos}
                 
                 <div className="project-announce">
                     <h3> Stay tuned for more repositories in the future!!! </h3>

@@ -11,20 +11,12 @@ interface LinkInput {
     url: string
 }
 
-interface ListInput {
-    input: string
-}
-
 function LinkListItems( { input, url }: LinkInput): JSX.Element {
     return <li> <a href={url}> {input} </a> </li>
 }
 
-function ListItems( { input }: ListInput): JSX.Element {
-    return <li> {input} </li>
-}
 
-
-function Specs() {
+function Specs(): JSX.Element {
     return (
         <div className="specs">
             <h2> Specifications </h2>
@@ -51,7 +43,7 @@ function Specs() {
     );
 }
 
-function Services() {
+function Services(): JSX.Element {
     return (
         <div className="services">
             <h2> Services </h2>
@@ -85,7 +77,7 @@ function Services() {
     );
 }
 
-function FuturePlans() {
+function FuturePlans(): JSX.Element {
     return (
         <div className="future-plans">
             <h2> Future Plans </h2>
@@ -105,7 +97,7 @@ interface ImageDivInput {
     text: string
 }
 
-function ReactImages( {title, image, classHeader, text }: ImageDivInput) {
+function ReactImages( {title, image, classHeader, text }: ImageDivInput): JSX.Element {
     return (
       <div className={classHeader + "-div photo-divs"}>
           <h2> {title} </h2>
@@ -116,7 +108,7 @@ function ReactImages( {title, image, classHeader, text }: ImageDivInput) {
     );
 }
 
-export default function Homelab() {
+export default function Homelab(): JSX.Element {
     let title1 = "PiKVM Setup";
     let text1 = "PiKVM assembled with RPi4, CSI-HDMI bridge and using USB inputs/outputs." 
     let title2 = "ATX Board";
