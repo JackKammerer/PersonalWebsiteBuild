@@ -3,9 +3,10 @@
 This is the source code for my personal website, here at https://jackkammerer.com.
 This code can be modified or otherwise used for any purpose. 
 
-This is a node project, so in order to run use the following command:
+This is a node project, so in order to run use the following commands:
 
 ```npm install```
+
 ```npm run dev ```
 
 Then, navigate to ```localhost:5173``` and you will see the site running. 
